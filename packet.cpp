@@ -20,7 +20,6 @@ struct sockaddr {
  unsigned short sa_family; // address family, AF_xxx
  char sa_data[14]; // 14 bytes of protocol address
 }; 
-
 // (IPv4 only--see struct sockaddr_in6 for IPv6)
 struct sockaddr_in {
  short int sin_family; // Address family, AF_INET
@@ -49,7 +48,7 @@ int main(){
 
 string packet(){
 
-	string data;
+	char data[1024];
 	for (int i = 0; i< 1024; i++){
 				
 		int a = rand()%74+48;
