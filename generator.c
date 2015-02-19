@@ -1,0 +1,35 @@
+
+#include <sys/types.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+#include <string.h>
+#include <time.h>
+#include <stdio.h>
+
+
+void main()
+{
+    srand(time(NULL));
+    int i=0;
+	int j;
+    char letter;
+    FILE *file;
+    //reads in file into buffer
+    file = fopen("MyAscii.txt", "w");
+    fclose(file);
+    
+    file = fopen("MyAscii.txt", "a");
+    for (j =0; j<1024; j=j+1)
+    {
+    	i=rand()%25;
+    	i+=65;
+    	if((rand()%2)==1)
+    	{
+    	     i+=32;
+    	}
+    	letter=i;
+    	fprintf(file,"%c",letter);
+    }
+    fclose(file);
+}

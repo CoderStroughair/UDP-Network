@@ -127,7 +127,7 @@ int main(void)
 			printf("Message Sent\n");
 		}
 		close(new_fd); // parent doesn't need this
-		printf("Exiting While Loop\n")
+		printf("Exiting While Loop\n");
 		}
 	return 0;
 	}

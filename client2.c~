@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 			perror("send");			//returns the number of bytes it sent. If it returns 0, it didnt send shit
 		printf("Message Sent\n");
 		if (!recv(sockfd, buf, MAXDATASIZE-1, 0)) 
-			perror("recv");			//returns the number of bytes it got. If it returns 0, it didnt get shit
+			perror("recv");
 
 		buf[numbytes] = '\0';
 		printf("Client: received '%s'\n",buf);
