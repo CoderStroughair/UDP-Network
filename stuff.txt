@@ -1,3 +1,0 @@
-Useful Resources:
-
-http://beej.us/guide/bgnet/output/print/bgnet_A4.pdf
